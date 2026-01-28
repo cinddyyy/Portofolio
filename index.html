@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Patrisia Cindy Paskariana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            /* Background bintang-bintang menggunakan CSS radial gradient */
+            background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 -90px, 40px -30px, 130px 220px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Animasi melayang halus */
+        
+        .float {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        style>.glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 18px;
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .animate-spin-slow {
+            animation: spin 3s linear infinite;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+
+    <nav class="flex justify-between items-center px-10 py-6 max-w-7xl mx-auto">
+        <div class="flex items-center gap-2">
+            <div class="p-[2px] rounded-full bg-gradient-to-tr from-[#60a5fa] to-[#f472b6]">
+                <img src="Foto Profil.png" alt="Profile" class="w-8 h-8 rounded-full object-cover object-center bg-[#050505]">
+            </div>
+
+            <span class="font-semibold tracking-wide text-white">
+                Cindy <br>
+                <span class="text-xs text-gray-400">Portofolio</span>
+            </span>
+        </div>
+
+        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 text-sm text-gray-300">
+            <a href="#home" class="hover:text-white transition">Home</a>
+            <a href="#aboutme" class="hover:text-white transition">About</a>
+            <a href="#skills" class="hover:text-white transition">Skills</a>
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-10 mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+        <div>
+            <p class="text-blue-400 tracking-[0.3em] text-sm mb-4">HELLO, I'M</p>
+            <h1 class="text-2xl md:text-4xl font-bold mb-6 gradient-text md:whitespace-nowrap">
+                Patrisia Cindy Paskariana
+            </h1>
+            <h2 class="text-2xl mb-6 font-mono">System Developer</h2>
+            <p class="text-gray-400 max-w-md leading-relaxed mb-10">
+                I translate complex AI research into intuitive applications that solve real-world problems.
+            </p>
+
+            <div class="flex gap-4">
+                <div class="relative group overflow-hidden rounded-lg p-[1px] flex items-center justify-center w-fit">
+                    <div class="absolute inset-[-1000%] animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#ffffff_25%,#3b82f6_50%,#ffffff_75%,#3b82f6_100%)]"></div>
+
+                    <a href="cv-patrisia.pdf" download="CV_Cindy_Paskariana.pdf" class="relative inline-flex items-center justify-center rounded-lg bg-[#050505] border border-blue-500/30 py-3 px-5 text-sm md:text-base font-medium text-white transition-all duration-300 hover:text-blue-400 hover:border-blue-400 hover:shadow-[0_0_15px_rgba(96,165,250,0.3)]">
+                        Download CV
+                        <span class="ml-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-lg p-[1px] flex items-center justify-center">
+                    <div class="absolute inset-[-1000%] animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#ffffff_25%,#3b82f6_50%,#ffffff_75%,#3b82f6_100%)]"></div>
+
+                    <a href="#home" class="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#050505] py-3 px-8 text-sm md:text-base font-medium text-white backdrop-blur-3xl transition-all duration-300 hover:text-blue-400">
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative flex justify-center items-center">
+            <div class="relative p-[2px] rounded-[22px] bg-gradient-to-tr from-[#60a5fa] to-[#f472b6]">
+
+                <div class="relative w-[350px] h-[400px] glass overflow-hidden rounded-[20px] border-none">
+                    <img src="Foto Profil.png" alt="Cindy" class="w-full h-full object-cover grayscale-[20%] bg-[#050505]">
+                </div>
+
+            </div>
+
+            <div class="absolute left-12 top-20
+            w-24 h-20
+            flex flex-col items-center justify-center gap-2
+            rounded-2xl
+            backdrop-blur-xl
+            shadow-xl
+            float
+            bg-gradient-to-br
+            from-emerald-300/35 via-teal-300/25 to-emerald-400/30
+
+
+            ">
+
+                <!-- Icon box -->
+                <div class="w-8 h-7
+                flex items-center justify-center
+                rounded-lg
+                bg-white/20
+                shadow-inner">
+                    <i class="fas fa-microchip text-white text-sm"></i>
+                </div>
+
+                <span class="text-[11px] font-medium text-white/90">
+        AI/ML
+    </span>
+            </div>
+
+
+
+
+            <div class="absolute right-12 top-1
+                   w-28 h-28
+                   flex flex-col items-center justify-center gap-2
+                   rounded-2xl
+                   backdrop-blur-xl
+                   /* Gradasi biru yang lebih pekat dan solid */
+                   bg-gradient-to-br from-blue-600/40 via-blue-900/60 to-slate-900/80
+                 
+                   /* Efek bayangan cahaya biru (glow) */
+                   shadow-[0_0_20px_rgba(37,99,235,0.3)]
+                   float" style="animation-delay: 1s;">
+                <div class="bg-blue-500/60 w-12 h-10 flex items-center justify-center rounded-lg mb-1 border-10">
+                    <i class="fas fa-book text-blue-50 text-xl shadow-sm"></i>
+                </div>
+
+                <span class="text-[11px] text-center text-blue-50 leading-tight tracking-wide drop-shadow-md">
+              Research<br />Published
+            </span>
+            </div>
+
+            <div class="absolute right-10 bottom-32 z-20
+    flex flex-col items-center justify-center gap-2
+    px-4 py-3
+    backdrop-blur-md float
+    shadow-xl" style="
+        animation-delay: 1.5s;
+        background: rgba(168, 85, 247, 0.25);
+        border-radius: 10px;
+        min-width: 100px;
+    ">
+
+                <!-- Icon -->
+                <div class="w-7 h-7
+                flex items-center justify-center
+                shadow-md" style="
+            background: rgba(192, 132, 252, 0.45);
+            border-radius: 10px;
+         ">
+                    <!-- simbol ungu muda -->
+                    <span class="text-[#E9D5FF] text-[10px] font-semibold">&lt;/&gt;</span>
+                </div>
+
+                <!-- Text -->
+                <span class="text-[11px] font-medium text-white/90 tracking-wide">
+        Full-Stack
+    </span>
+            </div>
+            <div class="absolute left-10 bottom-10 
+            w-28 h-24 
+            flex flex-col items-center justify-center gap-2 
+            rounded-2xl
+            backdrop-blur-lg 
+            bg-gray-400/40 
+            shadow-2xl 
+            float" style="animation-delay: 0.5s;">
+
+                <div class="bg-gray-200/30
+            w-10 h-10 
+            flex items-center justify-center 
+            rounded-xl 
+            shadow-inner">
+                    <img src="logo kanisius.png" alt="PT Kanisius" class="w-7 h-7 object-contain brightness-110">
+                </div>
+
+                <div class="flex flex-col items-center leading-tight">
+                    <span class="text-[11px] text-center text-white tracking-tighter">
+                    Intern at<br>PT Kanisius
+                </span>
+                </div>
+            </div>
+
+            <div class="absolute bottom-[-50px]
+        px-3 py-3
+        rounded-2xl
+        flex flex-col items-center justify-center
+        backdrop-blur-xl
+        bg-gradient-to-br from-orange-400/50 via-orange-500/30 to-orange-300/30
+        /* Glow orange agar lebih hidup */
+        shadow-[0_0_30px_rgba(251,146,60,0.4)]
+       ">
+                <div class="bg-orange-500/30 w-9 h-9 flex items-center justify-center rounded-xl mb-1.5">
+                    <i class="fas fa-star text-orange-200 text-xs"></i>
+                </div>
+
+                <div class="flex items-center gap-1">
+                    <span class="text-sm font-bold text-white tracking-wide">3.96 GPA</span>
+                </div>
+
+                <span class="text-[11px] font-medium tracking-tight text-center text-orange-50/90 leading-tight">
+    Sanata Dharma University</span>
+            </div>
+        </div>
+
+
+    </main>
+
+    <section id="aboutme-section" class="flex flex-col items-center text-center px-4 py-10">
+
+        <h2 id="aboutme" class="relative inline-block text-center text-blue-400 font-semibold text-3xl md:text-3xl mt-[60px] mb-4">
+            About Me
+            <span class="absolute left-1/2 bottom-[-10px] w-2/3 h-[3px] bg-blue-400/50 rounded-full -translate-x-1/2"></span>
+        </h2>
+
+        <p class="max-w-4xl text-base md:text-lg leading-relaxed font-mono text-gray-300">
+            I am a software engineer with a passion for front-end development. I have experience working with HTML, CSS, PHP, JavaScript, and Java. I also have experience with Python and Machine Learning. I am always looking to learn new things and improve my skills.
+            I am currently working on a few personal projects to showcase my skills and build my portfolio. I am excited to see where my career takes me and what new opportunities come my way.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[25px] w-full max-w-4xl mt-10">
+
+            <article class="relative w-full bg-gradient-to-br from-[#0E0E10] to-[#17171A]/23 
+                border border-[#0a94bf] p-6 flex flex-col items-center text-center 
+                transition-all duration-500 shadow-[0_0_15px_rgba(10,148,191,0.1)] 
+                hover:scale-105 hover:z-20 hover:border-blue-400">
+
+                <div class="absolute inset-0 bg-[#17171A] opacity-[0.23] pointer-events-none"></div>
+
+                <div class="relative w-20 h-20 mb-4 flex items-center justify-center">
+                    <div class="absolute w-14 h-14 rounded-full opacity-20 
+                        bg-[repeating-linear-gradient(-45deg,#fff,#fff_1px,transparent_1px,transparent_6px)]
+                        transform -translate-x-3"></div>
+                    <i class="fa-solid fa-palette text-[#bc47ff] text-4xl z-10"></i>
+                </div>
+
+                <h3 class="text-lg mb-2 text-white tracking-widest font-semibold">UI/UX</h3>
+                <p class="text-gray-400 text-xs leading-relaxed opacity-80">
+                    Designing intuitive and visually appealing user interfaces with a strong focus on user experience and usability.
+                </p>
+            </article>
+
+            <article class="relative w-full bg-gradient-to-br from-[#0E0E10] to-[#17171A]/23 
+                border border-[#0a94bf] p-6 flex flex-col items-center text-center 
+                transition-all duration-500 shadow-[0_0_15px_rgba(10,148,191,0.1)] 
+                hover:scale-105 hover:z-20 hover:border-blue-400">
+
+                <div class="absolute inset-0 bg-[#17171A] opacity-[0.23] pointer-events-none"></div>
+
+                <div class="relative w-20 h-20 mb-4 flex items-center justify-center">
+                    <div class="absolute w-14 h-14 rounded-full opacity-20 
+                        bg-[repeating-linear-gradient(-45deg,#fff,#fff_1px,transparent_1px,transparent_6px)]
+                        transform -translate-x-3"></div>
+                    <i class="fa-solid fa-laptop text-[#f472b6] text-4xl z-10"></i>
+                </div>
+
+                <h3 class="text-lg mb-2 text-white tracking-widest font-semibold">Website Design</h3>
+                <p class="text-gray-400 text-xs leading-relaxed opacity-80">
+                    Creating responsive, clean, and cross-device compatible websites using modern front-end technologies.
+                </p>
+            </article>
+
+            <article class="relative w-full bg-gradient-to-br from-[#0E0E10] to-[#17171A]/23 
+                border border-[#0a94bf] p-6 flex flex-col items-center text-center 
+                transition-all duration-500 shadow-[0_0_15px_rgba(10,148,191,0.1)] 
+                hover:scale-105 hover:z-20 hover:border-blue-400">
+
+                <div class="absolute inset-0 bg-[#17171A] opacity-[0.23] pointer-events-none"></div>
+
+                <div class="relative w-20 h-20 mb-4 flex items-center justify-center">
+                    <div class="absolute w-14 h-14 rounded-full opacity-20 
+                        bg-[repeating-linear-gradient(-45deg,#fff,#fff_1px,transparent_1px,transparent_6px)]
+                        transform -translate-x-3"></div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" class="w-14 h-auto z-10 brightness-125 contrast-125" style="filter: drop-shadow(0 0 8px rgba(188, 71, 255, 0.4));">
+                </div>
+
+                <h3 class="text-lg mb-2 text-white tracking-wide font-semibold">SAP</h3>
+                <p class="text-gray-400 text-xs leading-relaxed opacity-80">
+                    Have a basic understanding of SAP concepts and business processes through SAP overview training.
+                </p>
+            </article>
+        </div>
+
+
+    </section>
+
+    <section id="skills" class="flex flex-col items-center text-center px-4 py-10">
+        <h2 class="relative inline-block text-blue-400 font-bold text-3xl md:text-3xl mb-6 text-center">
+            Skills
+            <span class="absolute left-1/2 -translate-x-1/2 -bottom-3 w-2/3 h-[3px] bg-blue-400/50 rounded-full"></span>
+        </h2>
+
+        <p class="max-w-4xl text-base md:text-lg leading-relaxed font-mono text-gray-300">
+            A collection of technologies and tools I use to bring projects to life.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-y-0 w-full max-w-5xl mt-16 px-4">
+
+            <div class="relative group">
+                <div class="bg-black border border-white/20 rounded-2xl h-64 flex flex-col justify-end overflow-hidden transition-all duration-300 md:translate-x-4">
+
+                    <div class="flex-grow flex flex-col items-center justify-center gap-8">
+                        <div class="flex gap-8 items-center">
+                            <img src="https://cdn.simpleicons.org/html5" class="w-10 h-10 transition-transform duration-300" alt="HTML5" />
+
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" class="w-12 h-12 transition-transform duration-300" alt="CSS3" />
+
+                            <img src="https://cdn.simpleicons.org/javascript" class="w-10 h-10 transition-transform duration-300" alt="JavaScript" />
+                        </div>
+                        <div class="flex gap-8 items-center">
+                            <img src="https://cdn.simpleicons.org/tailwindcss" class="w-10 h-10 transition-transform duration-300" alt="Tailwind CSS" />
+
+                            <img src="https://cdn.simpleicons.org/bootstrap" class="w-10 h-10 transition-transform duration-300" alt="Bootstrap" />
+                        </div>
+                    </div>
+
+                    <div class="py-5 text-white font-bold tracking-widest text-center" style="background: linear-gradient(90deg, #2957A3 0%, #C961DE 100%);">
+                        Frontend
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative z-10 group -mt-5 md:-mt-10">
+                <div class="bg-black border-2 border-white/15 rounded-3xl h-72 flex flex-col justify-end overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.8)] transition-all duration-300">
+
+                    <div class="flex-grow flex flex-col items-center justify-center gap-6">
+                        <div class="flex gap-8 items-center">
+                            <img src="https://cdn.simpleicons.org/codeigniter/EE4323" class="w-14 h-14 transition-transform duration-300" alt="CodeIgniter" />
+
+                            <img src="https://cdn.simpleicons.org/laravel/FF2D20" class="w-14 h-14 transition-transform duration-300" alt="Laravel" />
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://cdn.simpleicons.org/streamlit/FF4B4B" class="w-14 h-14 transition-transform duration-300" alt="Streamlit" />
+                        </div>
+                    </div>
+
+                    <div class="py-6 text-white font-bold tracking-widest text-center text-lg" style="background: linear-gradient(90deg, #2957A3 0%, #C961DE 100%);">
+                        Framework
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="bg-black border border-white/20 rounded-2xl h-64 flex flex-col justify-end overflow-hidden transition-all duration-300 md:-translate-x-4">
+
+                    <div class="flex-grow flex items-center justify-center gap-10">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" class="w-16 h-16 transition-transform duration-300" alt="PHP" />
+
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" class="w-16 h-16 transition-transform duration-300" alt="Java" />
+                    </div>
+
+                    <div class="py-5 text-white font-bold tracking-widest text-center" style="background: linear-gradient(90deg, #2957A3 0%, #C961DE 100%);">
+                        Backend
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group mt-0 md:mt-20">
+                <div class="bg-black border border-white/20 rounded-2xl h-64 flex flex-col justify-end overflow-hidden transition-all duration-300 md:translate-x-4">
+
+                    <div class="flex-grow flex flex-col items-center justify-center gap-6">
+                        <div class="flex gap-8 items-center">
+                            <img src="https://cdn.simpleicons.org/python" class="w-12 h-12 transition-transform duration-300" alt="Python" />
+                            <img src="https://cdn.simpleicons.org/r" class="w-12 h-12 transition-transform duration-300" alt="R" />
+                        </div>
+                        <div class="flex gap-8 items-center">
+                            <img src="https://cdn.simpleicons.org/tensorflow" class="w-12 h-12 transition-transform duration-300" alt="TensorFlow" />
+                            <img src="https://cdn.simpleicons.org/scikitlearn" class="w-12 h-12 transition-transform duration-300" alt="Scikit-Learn" />
+                        </div>
+                    </div>
+
+                    <div class="py-5 text-white font-bold tracking-widest text-center" style="background: linear-gradient(90deg, #2957A3 0%, #C961DE 100%);">
+                        Machine Learning
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative z-10 group mt-5 md:mt-10">
+                <div class="bg-black border-2 border-white/15 rounded-3xl h-72 flex flex-col justify-end overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.8)] transition-all duration-300">
+
+                    <div class="flex-grow flex flex-col items-center justify-center gap-8">
+                        <div class="flex gap-8 items-center">
+                            <img src="https://cdn.simpleicons.org/figma" class="w-12 h-12 transition-transform duration-300" alt="Figma" />
+                            <img src="https://cdn.simpleicons.org/diagramsdotnet" class="w-12 h-12 transition-transform duration-300" alt="Draw.io" />
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" class="w-12 h-12 transition-transform duration-300" alt="VS Code" />
+                        </div>
+                        <div class="flex gap-8 items-center">
+                            <img src="https://cdn.simpleicons.org/git" class="w-12 h-12 transition-transform duration-300" alt="Git" />
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/netbeans/netbeans-original.svg" class="w-12 h-12 transition-transform duration-300" alt="NetBeans" />
+                        </div>
+                    </div>
+
+                    <div class="py-6 text-white font-bold tracking-widest text-center text-lg" style="background: linear-gradient(90deg, #2957A3 0%, #C961DE 100%);">
+                        Tools
+                    </div>
+                </div>
+            </div>
+            <div class="relative group mt-0 md:mt-20">
+                <div class="bg-black border border-white/20 rounded-2xl h-64 flex flex-col justify-end overflow-hidden transition-all duration-300 md:-translate-x-4">
+
+                    <div class="flex-grow flex items-center justify-center">
+                        <img src="https://www.svgrepo.com/show/331760/sql-database-generic.svg" class="w-16 h-16 transition-transform duration-300 object-contain" alt="SQL Developer" />
+                    </div>
+
+                    <div class="py-5 text-white font-bold tracking-widest text-center" style="background: linear-gradient(90deg, #2957A3 0%, #C961DE 100%);">
+                        Database
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="flex flex-col items-center text-center px-4 py-10">
+        <h2 class="relative inline-block text-blue-400 font-bold text-3xl md:text-3xl mb-6 text-center">
+            Experience
+            <span class="absolute left-1/2 -translate-x-1/2 -bottom-3 w-2/3 h-[3px] bg-blue-400/50 rounded-full"></span>
+        </h2>
+
+        <p class="max-w-4xl text-base md:text-lg leading-relaxed font-mono text-gray-300">
+            My experience during 3.5 years in the Informatics major.
+        </p>
+        <div class="mt-12 w-full max-w-5xl px-4">
+            <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 justify-between">
+
+                <div class="hidden md:block absolute top-10 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-[4px] bg-blue-400 blur-sm"></div>
+                </div>
+
+                <div class="relative flex-1 flex flex-col items-center md:items-start group">
+                    <div class="z-10 mb-4 flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 border-2 border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.5)] transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="md:pr-8">
+                        <h3 class="text-white font-bold text-xl mb-1">Fullstack Intern</h3>
+                        <p class="text-slate-400 text-base font-semibold mb-3">PT Kanisius | Feb - Jun 2025</p>
+                        <p class="text-gray-400 text-base leading-relaxed text-center md:text-left">
+                            Responsible for conducting bug checking through manual and automated testing, improving the application workflow of the SnD system, and updating business processes for the tiered royalty system. Additionally, identifying and assisting in resolving failed
+                            and unbalanced journal issues, as well as preparing comprehensive system documentation for the SnD application.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex-1 flex flex-col items-center md:items-start group">
+                    <div class="z-10 mb-4 flex items-center justify-center w-12 h-12 rounded-full bg-slate-900 border-2 border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.5)] transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <div class="md:pl-8">
+                        <h3 class="text-white font-bold text-xl mb-1">National Seminar Presenter</h3>
+                        <p class="text-slate-400 text-base font-semibold mb-3">Paper Author and Presenter | Nov 2025</p>
+                        <p class="text-gray-400 text-base leading-relaxed text-center md:text-left">
+                            Presented the paper “Web-Based Classification of Sugarcane Leaf Diseases Using EfficientNetB7–Support Vector Machine” at an event organized by SISFOTEK. The system classifies sugarcane leaf diseases using image-based machine learning through a web-based
+                            interface. The research paper is available at <a href="https://seminar.iaii.or.id/index.php/SISFOTEK/article/view/669" target="_blank" class="text-blue-400 hover:text-blue-300 underline transition-colors">
+                                SISFOTEK
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="flex flex-col items-center text-center px-4 py-10 bg-[#050505]">
+        <h2 class="relative inline-block text-blue-400 font-bold text-3xl md:text-3xl mb-6 text-center">
+            Projects
+            <span class="absolute left-1/2 -translate-x-1/2 -bottom-3 w-2/3 h-[3px] bg-blue-400/50 rounded-full"></span>
+        </h2>
+
+        <p class="max-w-2xl text-base md:text-lg leading-relaxed font-mono text-gray-300 mb-12">
+            Here are some of the projects I have worked on. I am always looking to learn new things and improve my skills.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
+
+            <div class="bg-[#0E1117] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0E0E10] hover:to-[#17171A]/23 hover:border-[#0a94bf] hover:shadow-[0_0_30px_rgba(10,148,191,0.2)] flex flex-col group">
+                <div class="relative h-40 overflow-hidden">
+                    <img src="bc tebuai.jpeg" alt="Sugarcane Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+
+                <div class="p-5 flex flex-col flex-grow text-left">
+                    <h3 class="text-white font-bold text-lg font-mono mb-2">TebuAI Website<br> Sugarcane Classification</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4 flex-grow">
+                        Web-based classification system for sugarcane leaf diseases, focusing on red rot, yellow, rust, and mosaic, implemented using EfficientNetB7 feature extraction and Support Vector Machine.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">Python</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">CSS</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">HTML</span>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="https://tebuai.streamlit.app/" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-external-link-alt text-xs"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/cinddyyy/penyakit-tanaman-tabu" class="flex-1 bg-white hover:bg-gray-200 text-black text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 md:w-5 md:h-5">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#0E1117] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0E0E10] hover:to-[#17171A]/23 hover:border-[#0a94bf] hover:shadow-[0_0_30px_rgba(10,148,191,0.2)] flex flex-col group">
+                <div class="relative h-40 overflow-hidden">
+                    <img src="bc porto.jpeg" alt="Portfolio Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+
+                <div class="p-5 flex flex-col flex-grow text-left">
+                    <h3 class="text-white font-bold text-lg font-mono mb-2">Portofolio</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4 flex-grow">
+                        A personal portfolio showcasing my profile, experiences, skills, and projects I’ve worked on.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">HTML</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">Tailwind</span>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="#" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                            <i class="fas fa-external-link-alt text-xs"></i> Live Demo
+                        </a>
+                        <a href="#" class="flex-1 bg-white hover:bg-gray-200 text-black text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 md:w-5 md:h-5">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#0E1117] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0E0E10] hover:to-[#17171A]/23 hover:border-[#0a94bf] hover:shadow-[0_0_30px_rgba(10,148,191,0.2)] flex flex-col group">
+                <div class="relative h-40 overflow-hidden">
+                    <img src="bc proyek infor.png" alt="Proyekinfor Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+
+                <div class="p-5 flex flex-col flex-grow text-left">
+                    <h3 class="text-white font-bold text-lg font-mono mb-2">Bercerita.com Website</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4 flex-grow">
+                        “Bercerita.com is a web-based platform that makes mental health consultations easier. Users can write anonymous statuses, discuss with psychology students, and schedule consultations with psychologists online or offline.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">JavaScript</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">CSS</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">HTML</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">SQL</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">PHP</span>
+                    </div>
+
+
+
+
+                    <div class="flex gap-3">
+                        <a href="https://www.figma.com/design/6vujGf8psszJ9IGDSfKWiz/UI-Bercerita.com?node-id=1-2&t=z2KpkZede9p8OLNL-0" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 md:w-5 md:h-5">
+                                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path>
+                                <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path>
+                                <path d="M8.5 16A3.5 3.5 0 0 1 5 12.5 3.5 3.5 0 0 1 8.5 9H12v7H8.5z"></path>
+                                <path d="M12 9h3.5a3.5 3.5 0 1 1 0 7H12V9z"></path>
+                                <path d="M5 18.5A3.5 3.5 0 0 1 8.5 15H12v3.5a3.5 3.5 0 1 1-7 0z"></path>
+                            </svg> Figma
+                        </a>
+                        <a href="https://github.com/LoompaHQ/Bercerita.com" class="w-1/2 bg-white hover:bg-gray-200 text-black text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 md:w-5 md:h-5">
+                             <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                             <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                         </svg> Code
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="bg-[#0E1117] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0E0E10] hover:to-[#17171A]/23 hover:border-[#0a94bf] hover:shadow-[0_0_30px_rgba(10,148,191,0.2)] flex flex-col group">
+                <div class="relative h-40 overflow-hidden">
+                    <img src="bc sppk.jpeg" alt="SPPK Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+
+                <div class="p-5 flex flex-col flex-grow text-left">
+                    <h3 class="text-white font-bold text-lg font-mono mb-2">Decision Support System for Regional Aid Policy Based on Poverty Status</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4 flex-grow">
+                        This website is designed to support regional aid policy decision-making based on poverty status analysis. It helps local governments identify poverty characteristics to ensure accurate and targeted aid distribution.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">JavaScript</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">CSS</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">HTML</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">SQL</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">PHP</span>
+                    </div>
+
+                    <a href="https://github.com/vivinexxx/SPPK-APP" class="w-1/2 bg-white hover:bg-gray-200 text-black text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 md:w-5 md:h-5">
+                             <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                             <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                         </svg> Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-[#0E1117] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0E0E10] hover:to-[#17171A]/23 hover:border-[#0a94bf] hover:shadow-[0_0_30px_rgba(10,148,191,0.2)] flex flex-col group">
+                <div class="relative h-40 overflow-hidden">
+                    <img src="bc petshop.png" alt="PetShop Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+
+                <div class="p-5 flex flex-col flex-grow text-left">
+                    <h3 class="text-white font-bold text-lg font-mono mb-2">Pet Shop Website</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4 flex-grow">
+                        A pet shop application for ordering wet food, dry food, litter, and accessories for cats and dogs.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">JavaScript</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">CSS</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">HTML</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">SQL</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">PHP</span>
+                    </div>
+
+                    <a href="https://github.com/cinddyyy/PetShop" class="w-1/2 bg-white hover:bg-gray-200 text-black text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 md:w-5 md:h-5">
+                             <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                             <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                         </svg> Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-[#0E1117] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0E0E10] hover:to-[#17171A]/23 hover:border-[#0a94bf] hover:shadow-[0_0_30px_rgba(10,148,191,0.2)] flex flex-col group">
+                <div class="relative h-40 overflow-hidden">
+                    <img src="bc gymlok.png" alt="GymLok Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                </div>
+
+                <div class="p-5 flex flex-col flex-grow text-left">
+                    <h3 class="text-white font-bold text-lg font-mono mb-2">GymLok App Interface</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4 flex-grow">
+                        GymLok is a fitness application user interface designed to showcase features such as finding nearby gyms, accessing workout tutorials, tracking fitness progress, and viewing gym facility information through a chat feature.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">UI</span>
+                    </div>
+
+                    <a href="https://www.figma.com/design/5quKucYsicgKYrMNjAyTJc/Untitled?t=zq0Bv9YYAANspdjd-1" target="_blank" class="w-1/2 bg-white hover:bg-gray-200 text-black text-xs md:text-sm font-bold py-2.5 rounded-lg text-center transition-all flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 md:w-5 md:h-5">
+                            <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path>
+                            <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path>
+                            <path d="M8.5 16A3.5 3.5 0 0 1 5 12.5 3.5 3.5 0 0 1 8.5 9H12v7H8.5z"></path>
+                            <path d="M12 9h3.5a3.5 3.5 0 1 1 0 7H12V9z"></path>
+                            <path d="M5 18.5A3.5 3.5 0 0 1 8.5 15H12v3.5a3.5 3.5 0 1 1-7 0z"></path>
+                        </svg> Figma
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="flex flex-col items-center justify-center px-6 pt-4 pb-20">
+        <h2 class="relative inline-block text-blue-400 font-bold text-3xl md:text-3xl mb-6 text-center">
+            Contact
+            <span class="absolute left-1/2 -translate-x-1/2 -bottom-3 w-2/3 h-[3px] bg-blue-400/50 rounded-full"></span>
+        </h2>
+
+        <p class="text-gray-300 font-mono mb-6 text-center max-w-4xl">
+            Have a project in mind or want to collaborate? Feel free to reach out!
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+
+            <div class="relative group overflow-hidden rounded-xl p-[1px] flex items-center justify-center">
+                <div class="absolute inset-[-1000%] animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#ffffff_25%,#3b82f6_50%,#ffffff_75%,#3b82f6_100%)]"></div>
+
+                <a href="https://www.linkedin.com/in/patrisia-cindy-paskariana-043629238/" target="_blank" class="relative glass w-full p-4 flex items-center gap-4 bg-[#111827] rounded-xl transition-all duration-300 hover:text-blue-400">
+                    <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                        <i class="fab fa-linkedin text-blue-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-sm">LinkedIn</h3>
+                        <p class="text-gray-400 text-xs">Patrisia Cindy Paskariana</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="relative group overflow-hidden rounded-xl p-[1px] flex items-center justify-center">
+                <div class="absolute inset-[-1000%] animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,#f472b6_0%,#ffffff_25%,#f472b6_50%,#ffffff_75%,#f472b6_100%)]"></div>
+
+                <a href="mailto:patrisiacindypaskariana10@gmail.com" class="relative glass w-full p-4 flex items-center gap-4 bg-[#111827] rounded-xl transition-all duration-300 hover:text-pink-400">
+                    <div class="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-envelope text-pink-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-sm">Email</h3>
+                        <p class="text-gray-400 text-xs text-nowrap">patrisiacindypaskariana10gmail.com</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full mt-8 max-w-2xl bg-white/[0.05] backdrop-blur-xl p-8 rounded-2xl border border-blue-500/20 shadow-[0_0_20px_rgba(59,130,246,0.1)]">
+            <form action="https://formspree.io/f/mbdogwqo" method="POST" class="space-y-6">
+                <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-mono text-white tracking-widest">Name</label>
+                        <input type="text" name="name" required placeholder="Your name" class="bg-blue-900/10 border border-blue-500/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-all text-white placeholder:text-gray-500">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-mono text-white tracking-widest">Email</label>
+                        <input type="email" name="email" required placeholder="your.email@example.com" class="bg-blue-900/10 border border-blue-500/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-all text-white placeholder:text-gray-500">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-xs font-mono text-white tracking-widest">Subject</label>
+                    <input type="text" name="subject" placeholder="What is this about?" class="bg-blue-900/10 border border-blue-500/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-all text-white placeholder:text-gray-500">
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="text-xs font-mono text-white tracking-widest">Message</label>
+                    <textarea name="message" required placeholder="Write your message here..." rows="4" class="bg-blue-900/10 border border-blue-500/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-all text-white placeholder:text-gray-500 resize-none"></textarea>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-lg p-[1px] flex items-center justify-center mt-4">
+                    <div class="absolute inset-[-1000%] animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,#3b82f6_0%,#ffffff_25%,#3b82f6_50%,#ffffff_75%,#3b82f6_100%)]"></div>
+                    <button type="submit" class="relative inline-flex h-full w-full items-center justify-center rounded-lg bg-[#050505] py-3 px-8 text-sm md:text-base font-medium text-white backdrop-blur-3xl transition-all duration-300 hover:text-blue-400">
+                        <i class="fas fa-paper-plane mr-2 text-xs"></i> Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-[#050505] text-white pb-6 px-10 font-sans mt-auto">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="h-[2px] w-full bg-gradient-to-r from-[#60a5fa] to-[#f472b6] mb-8 shadow-[0_0_10px_rgba(96,165,250,0.3)]"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold text-lg tracking-wide text-white">Cindy</span>
+                        <span class="text-gray-400 text-sm">| patrisiacindypaskariana10@gmail.com</span>
+                    </div>
+                    <p class="text-sm text-gray-300">Fullstack Web Developer</p>
+                    <p class="text-[10px] text-gray-200 uppercase tracking-widest">
+                        Design Credit – Elias from Figma community
+                    </p>
+                </div>
+
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="https://github.com/cinddyyy" target="_blank" class="text-2xl text-white hover:text-gray-400 transition-colors duration-300 transform">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/patrisia-cindy-paskariana-043629238/" target="_blank" class="text-2xl text-white hover:text-gray-400 transition-colors duration-300 transform">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-white text-sm font-mono tracking-widest">
+                © 2026 Patrisia Cindy Paskariana
+            </div>
+    </footer>
+</body>
+
+</html>
