@@ -82,29 +82,88 @@
 
 <body class="min-h-screen">
 
-    <nav class="flex justify-between items-center px-10 py-6 max-w-7xl mx-auto">
-        <div class="flex items-center gap-2">
-            <div class="p-[2px] rounded-full bg-gradient-to-tr from-[#60a5fa] to-[#f472b6]">
-                <img src="Foto Profil.png" alt="Profile" class="w-8 h-8 rounded-full object-cover object-center bg-[#050505]">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/10">
+        <div class="flex justify-between items-center px-10 py-4 max-w-7xl mx-auto w-full">
+
+            <div class="flex items-center gap-3">
+                <div class="p-[2px] rounded-full bg-gradient-to-tr from-[#60a5fa] to-[#f472b6]">
+                    <img src="Foto Profil.png" alt="Profile" class="w-8 h-8 rounded-full object-cover bg-[#050505]">
+                </div>
+
+                <span class="font-semibold tracking-wide text-white leading-tight">
+                    Cindy <br>
+                    <span class="text-xs text-gray-400">Portofolio</span>
+                </span>
             </div>
 
-            <span class="font-semibold tracking-wide text-white">
-                Cindy <br>
-                <span class="text-xs text-gray-400">Portofolio</span>
-            </span>
-        </div>
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#aboutme" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
 
-        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 text-sm text-gray-300">
-            <a href="#home" class="hover:text-white transition">Home</a>
-            <a href="#aboutme" class="hover:text-white transition">About</a>
-            <a href="#skills" class="hover:text-white transition">Skills</a>
-            <a href="#projects" class="hover:text-white transition">Projects</a>
-            <a href="#contact" class="hover:text-white transition">Contact</a>
-        </div>
+            <div class="flex items-center">
+                <button class="md:hidden text-white text-2xl" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
 
+        </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-10 mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <!-- Mobile Side Menu -->
+    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-72 translate-x-full transition-transform duration-300 z-50 p-6 border-l border-white/10 shadow-2xl" style="background-color: #050505; background-image: radial-gradient(white, rgba(255, 255, 255, .2) 1px, transparent 20px); background-size: 150px 150px;">
+
+        <div class="flex justify-between items-center mb-8">
+            <span class="text-sm tracking-widest text-gray-400">MENU</span>
+            <button onclick="closeMenu()" class="text-white text-xl">
+        <i class="fas fa-times"></i>
+    </button>
+        </div>
+
+        <ul class="flex flex-col gap-6 text-lg">
+            <li class="flex items-center gap-3 text-gray-400
+                       hover:text-white transition">
+                <span class="text-white">›</span>
+                <a href="#home" onclick="closeMenu()">Home</a>
+            </li>
+
+            <li class="flex items-center gap-3 text-gray-400
+                       hover:text-white transition">
+                <span class="text-white">›</span>
+                <a href="#aboutme" onclick="closeMenu()">About Me</a>
+            </li>
+
+            <li class="flex items-center gap-3 text-gray-400
+                       hover:text-white transition">
+                <span class="text-white">›</span>
+                <a href="#skills" onclick="closeMenu()">Skills</a>
+            </li>
+
+            <li class="flex items-center gap-3 text-gray-400
+                       hover:text-white transition">
+                <span class="text-white">›</span>
+                <a href="#projects" onclick="closeMenu()">Project</a>
+            </li>
+
+            <li class="flex items-center gap-3 text-gray-400
+                       hover:text-white transition">
+                <span class="text-white">›</span>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" onclick="closeMenu()" class="fixed inset-0 bg-black/60 hidden z-40">
+    </div>
+
+
+    <main class="max-w-7xl mx-auto px-10 mt-10 pt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
         <div>
             <p class="text-blue-400 tracking-[0.3em] text-sm mb-4">HELLO, I'M</p>
@@ -143,7 +202,7 @@
         <div class="relative flex justify-center items-center">
             <div class="relative p-[2px] rounded-[22px] bg-gradient-to-tr from-[#60a5fa] to-[#f472b6]">
 
-                <div class="relative w-[350px] h-[400px] glass overflow-hidden rounded-[20px] border-none">
+                <div id="home" class="relative w-[350px] h-[400px] glass overflow-hidden rounded-[20px] border-none">
                     <img src="Foto Profil.png" alt="Cindy" class="w-full h-full object-cover grayscale-[20%] bg-[#050505]">
                 </div>
 
@@ -587,6 +646,7 @@
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">HTML</span>
                         <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">Tailwind</span>
+                        <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-[9px] text-gray-300 font-medium">JavaScript</span>
                     </div>
 
                     <div class="flex gap-3">
@@ -836,6 +896,19 @@
                 © 2026 Patrisia Cindy Paskariana
             </div>
     </footer>
+
+    <script>
+        function openMenu() {
+            document.getElementById("mobileMenu").classList.remove("translate-x-full");
+            document.getElementById("overlay").classList.remove("hidden");
+        }
+
+        function closeMenu() {
+            document.getElementById("mobileMenu").classList.add("translate-x-full");
+            document.getElementById("overlay").classList.add("hidden");
+        }
+    </script>
+
 </body>
 
 </html>
